@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Kanishk Services</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Kanishk Services" id="site-logo">
+                </a>
+            </div>
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="training.html">Training</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="notice.html">Notice</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-overlay"></div>
+        <div class="container">
+            <h1>Gallery</h1>
+            <p>Capturing moments of success and growth</p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="training">Training</button>
+                <button class="filter-btn" data-filter="events">Events</button>
+                <button class="filter-btn" data-filter="placements">Placements</button>
+                <button class="filter-btn" data-filter="office">Office</button>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="training">
+                    <img src="images/gallery/img1.jpg" alt="Training Session">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Java Full Stack Training</h3>
+                            <p>Hands-on coding session</p>
+                            <button class="view-btn" onclick="openLightbox(0)"><i class="fas fa-search-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="events">
+                    <img src="images/gallery/img2.jpg" alt="Corporate Event">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Annual Meet 2024</h3>
+                            <p>Team gathering</p>
+                            <button class="view-btn" onclick="openLightbox(1)"><i class="fas fa-search-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="placements">
+                    <img src="images/gallery/img3.jpg" alt="Placement Success">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Placement Drive</h3>
+                            <p>Success stories</p>
+                            <button class="view-btn" onclick="openLightbox(2)"><i class="fas fa-search-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="training">
+                    <img src="images/gallery/img4.jpg" alt="React Training">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>React.js Workshop</h3>
+                            <p>Frontend development</p>
+                            <button class="view-btn" onclick="openLightbox(3)"><i class="fas fa-search-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="office">
+                    <img src="images/gallery/img5.jpg" alt="Office Space">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Our Workspace</h3>
+                            <p>Modern facilities</p>
+                            <button class="view-btn" onclick="openLightbox(4)"><i class="fas fa-search-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="events">
+                    <img src="images/gallery/img6.jpg" alt="Seminar">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Career Seminar</h3>
+                            <p>Industry insights</p>
+                            <button class="view-btn" onclick="openLightbox(5)"><i class="fas fa-search-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="placements">
+                    <img src="images/gallery/img7.jpg" alt="Interview Preparation">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Mock Interviews</h3>
+                            <p>Interview prep session</p>
+                            <button class="view-btn" onclick="openLightbox(6)"><i class="fas fa-search-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="training">
+                    <img src="images/gallery/img8.jpg" alt="MERN Stack">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>MERN Stack Class</h3>
+                            <p>Full stack development</p>
+                            <button class="view-btn" onclick="openLightbox(7)"><i class="fas fa-search-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="office">
+                    <img src="images/gallery/img9.jpg" alt="Training Room">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Training Facility</h3>
+                            <p>State-of-the-art labs</p>
+                            <button class="view-btn" onclick="openLightbox(8)"><i class="fas fa-search-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="events">
+                    <img src="images/gallery/img10.jpg" alt="Workshop">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Tech Workshop</h3>
+                            <p>Latest technologies</p>
+                            <button class="view-btn" onclick="openLightbox(9)"><i class="fas fa-search-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="placements">
+                    <img src="images/gallery/img11.jpg" alt="Job Fair">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Campus Hiring</h3>
+                            <p>Direct recruitment</p>
+                            <button class="view-btn" onclick="openLightbox(10)"><i class="fas fa-search-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="training">
+                    <img src="images/gallery/img12.jpg" alt="Certification">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Certification Ceremony</h3>
+                            <p>Batch completion</p>
+                            <button class="view-btn" onclick="openLightbox(11)"><i class="fas fa-search-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="office">
+                    <img src="images/gallery/img13.jpg" alt="Reception">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Reception Area</h3>
+                            <p>Welcome space</p>
+                            <button class="view-btn" onclick="openLightbox(12)"><i class="fas fa-search-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="events">
+                    <img src="images/gallery/img14.jpg" alt="Team Building">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Team Building</h3>
+                            <p>Corporate activity</p>
+                            <button class="view-btn" onclick="openLightbox(13)"><i class="fas fa-search-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="training">
+                    <img src="images/gallery/img15.jpg" alt="Project Presentation">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Project Demo Day</h3>
+                            <p>Student presentations</p>
+                            <button class="view-btn" onclick="openLightbox(14)"><i class="fas fa-search-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="placements">
+                    <img src="images/gallery/img16.jpg" alt="Offer Letters">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Offer Letter Distribution</h3>
+                            <p>Successful placements</p>
+                            <button class="view-btn" onclick="openLightbox(15)"><i class="fas fa-search-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="office">
+                    <img src="images/gallery/img17.jpg" alt="Conference Room">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Meeting Room</h3>
+                            <p>Discussion space</p>
+                            <button class="view-btn" onclick="openLightbox(16)"><i class="fas fa-search-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="events">
+                    <img src="images/gallery/img18.jpg" alt="Guest Lecture">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Guest Speaker Session</h3>
+                            <p>Industry expert talk</p>
+                            <button class="view-btn" onclick="openLightbox(17)"><i class="fas fa-search-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="training">
+                    <img src="images/gallery/img19.jpg" alt="Coding Session">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Live Coding</h3>
+                            <p>Practical session</p>
+                            <button class="view-btn" onclick="openLightbox(18)"><i class="fas fa-search-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="placements">
+                    <img src="images/gallery/img20.jpg" alt="Success Stories">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Testimonials</h3>
+                            <p>Happy students</p>
+                            <button class="view-btn" onclick="openLightbox(19)"><i class="fas fa-search-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="office">
+                    <img src="images/gallery/img21.jpg" alt="Cafeteria">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Cafeteria</h3>
+                            <p>Fresh Foods</p>
+                            <button class="view-btn" onclick="openLightbox(19)"><i class="fas fa-search-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+        <a class="lightbox-prev" onclick="changeImage(-1)">&#10094;</a>
+        <a class="lightbox-next" onclick="changeImage(1)">&#10095;</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Kanishk Services</h3>
+                    <p>Empowering careers and transforming businesses through quality training, placement services, and strategic solutions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.linkedin.com/company/kanishk-services-private-limited"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+
+                    <!-- MCA License -->
+                        <div class="mca-badge">
+                            <img src="images/mca-logo.png" alt="MCA Registered">
+                            <div class="mca-details">
+                                <span class="mca-label">CIN No.</span>
+                                <span class="mca-number">12345678901234</span>
+                            </div>
+                        </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="training.html">Training Programs</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="notice.html">Job Opportunities</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html">Man Power Agency</a></li>
+                        <li><a href="services.html">IT & Non-IT Training</a></li>
+                        <li><a href="services.html">Job Placements</a></li>
+                        <li><a href="services.html">Security Solutions</a></li>
+                        <li><a href="services.html">Internships</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-envelope"></i> info@kanishkservices.com</li>
+                        <li><i class="fas fa-phone"></i> +91 93468 11821</li>
+                        <li><i class="fa-brands fa-whatsapp"></i> +91 95332 55508</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Hyderabad, Telangana</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Kanishk Services. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
