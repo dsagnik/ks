@@ -305,24 +305,47 @@ window.openLightbox = openLightbox;
 window.closeLightbox = closeLightbox;
 window.changeImage = changeImage;
 
-// ===== WALK-IN POPUP =====
+// ===== ONSCREEN WALK-IN POPUP =====
 window.addEventListener("load", () => {
+    const popupMarkup = `
+        <div class="walkin-popup" id="walkinPopup">
+            <div class="walkin-popup-content">
+                <span class="popup-close" id="closePopup">&times;</span>
+                <img src="images/walkin.jpg" alt="Walk-In Drive">
+                <div class="popup-body">
+                    <h2>Walk-In Drive — Opportunity Awaits!</h2>
+                    <p>We’re hosting a professional Walk-In Drive soon. Click below to register or view details.</p>
+                    <button class="popup-btn" id="openForm">Register Now</button>
+                </div>
+            </div>
+        </div>
+    `;
+
+    // Insert into page dynamically
+    document.body.insertAdjacentHTML("beforeend", popupMarkup);
+
     const popup = document.getElementById("walkinPopup");
     const closeBtn = document.getElementById("closePopup");
+    const openForm = document.getElementById("openForm");
 
-    if (popup) {
-        setTimeout(() => {
-            popup.style.display = "flex";
-        }, 800); // shows after website loads
-    }
+    // Show popup after small delay
+    setTimeout(() => {
+        popup.style.display = "flex";
+    }, 800);
 
-    if (closeBtn) {
-        closeBtn.addEventListener("click", () => {
-            popup.style.display = "none";
-        });
-    }
+    // Close
+    closeBtn.addEventListener("click", () => {
+        popup.style.display = "none";
+    });
+
+    // Placeholder for form action later
+    openForm.addEventListener("click", () => {
+        alert("Form will be embedded here.");
+    });
 });
+
 
 // Change Copyright Year Automatically
 
 document.getElementById('currentYear').textContent = new Date().getFullYear();
+
