@@ -305,5 +305,24 @@ window.openLightbox = openLightbox;
 window.closeLightbox = closeLightbox;
 window.changeImage = changeImage;
 
+// ===== WALK-IN POPUP =====
+window.addEventListener("load", () => {
+    const popup = document.getElementById("walkinPopup");
+    const closeBtn = document.getElementById("closePopup");
+
+    if (popup) {
+        setTimeout(() => {
+            popup.style.display = "flex";
+        }, 800); // shows after website loads
+    }
+
+    if (closeBtn) {
+        closeBtn.addEventListener("click", () => {
+            popup.style.display = "none";
+        });
+    }
+});
+
 // Change Copyright Year Automatically
+
 document.getElementById('currentYear').textContent = new Date().getFullYear();
