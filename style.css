@@ -58,20 +58,6 @@
     font-size: 1rem;
 }
 
-.walkin-popup .popup-btn {
-    padding: 12px 25px;
-    background: #0d2b60;
-    color: #fff;
-    border: none;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 6px;
-}
-
-.walkin-popup .popup-btn:hover {
-    background: #0e4bef;
-}
-
 .popup-close {
     position: absolute;
     top: 10px; right: 14px;
