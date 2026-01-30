@@ -312,48 +312,43 @@ window.addEventListener("load", () => {
             <div class="walkin-popup-content">
                 <span class="popup-close" id="closePopup">&times;</span>
                 <img src="images/walkin.jpg" alt="Walk-In Drive">
+
                 <div class="popup-body">
-                    <h2>Walk-In Drive Registration</h2>
-                    <p>Please fill the form below to register.</p>
-                
-                    <iframe 
-                        src="https://docs.google.com/forms/u/1/d/e/1FAIpQLSeOUZ9sj2voI7dKM6_0ZPENmVGDrs4wkBJR9xUDCBrdK9kErw/formResponse?pli=1"
-                        width="100%" 
-                        height="400"
-                        frameborder="0"
-                        style="border:0;">
-                    </iframe>
+                    <h2>Walk-In Drive — Opportunity Awaits!</h2>
+                    <p>
+                        We’re hosting a professional Walk-In Drive soon.
+                        Click below to register.
+                    </p>
+
+                    <a 
+                      href="https://docs.google.com/forms/d/e/1FAIpQLSeOUZ9sj2voI7dKM6_0ZPENmVGDrs4wkBJR9xUDCBrdK9kErw/viewform?pli=1&pli=1"
+                      target="_blank"
+                      class="popup-btn">
+                      Register Now
+                    </a>
                 </div>
             </div>
-        </div>`;
+        </div>
+    `;
 
-    // Insert into page dynamically
     document.body.insertAdjacentHTML("beforeend", popupMarkup);
 
     const popup = document.getElementById("walkinPopup");
     const closeBtn = document.getElementById("closePopup");
-    const openForm = document.getElementById("openForm");
 
-    // Show popup after small delay
     setTimeout(() => {
         popup.style.display = "flex";
     }, 800);
 
-    // Close
     closeBtn.addEventListener("click", () => {
         popup.style.display = "none";
     });
-
-    // Placeholder for form action later
-    openForm.addEventListener("click", () => {
-        alert("Form will be embedded here.");
-    });
 });
-
 
 // Change Copyright Year Automatically
 
 document.getElementById('currentYear').textContent = new Date().getFullYear();
+
 
 
 
