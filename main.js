@@ -313,12 +313,18 @@ window.addEventListener("load", () => {
                 <span class="popup-close" id="closePopup">&times;</span>
                 <img src="images/walkin.jpg" alt="Walk-In Drive">
                 <div class="popup-body">
-                    <h2>Walk-In Drive — Opportunity Awaits!</h2>
-                    <p>We’re hosting a professional Walk-In Drive soon. Click below to register or view details.</p>
-                    <button class="popup-btn" id="openForm">Register Now</button>
-                </div>
-            </div>
-        </div>
+    <h2>Walk-In Drive Registration</h2>
+    <p>Please fill the form below to register.</p>
+
+    <iframe 
+        src="YOUR_GOOGLE_FORM_LINK_HERE"
+        width="100%" 
+        height="400"
+        frameborder="0"
+        style="border:0;">
+    </iframe>
+</div>
+
     `;
 
     // Insert into page dynamically
@@ -348,4 +354,5 @@ window.addEventListener("load", () => {
 // Change Copyright Year Automatically
 
 document.getElementById('currentYear').textContent = new Date().getFullYear();
+
 
