@@ -323,7 +323,7 @@ window.addEventListener("load", () => {
                     <a 
                       href="https://docs.google.com/forms/d/e/1FAIpQLSeOUZ9sj2voI7dKM6_0ZPENmVGDrs4wkBJR9xUDCBrdK9kErw/viewform?pli=1&pli=1"
                       target="_blank"
-                      class="popup-btn">
+                      class=".btn-apply">
                       Register Now
                     </a>
                 </div>
@@ -348,6 +348,7 @@ window.addEventListener("load", () => {
 // Change Copyright Year Automatically
 
 document.getElementById('currentYear').textContent = new Date().getFullYear();
+
 
 
 
