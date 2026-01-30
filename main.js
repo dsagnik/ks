@@ -317,7 +317,7 @@ window.addEventListener("load", () => {
                     <p>Please fill the form below to register.</p>
                 
                     <iframe 
-                        src="YOUR_GOOGLE_FORM_LINK_HERE"
+                        src="https://docs.google.com/forms/u/1/d/e/1FAIpQLSeOUZ9sj2voI7dKM6_0ZPENmVGDrs4wkBJR9xUDCBrdK9kErw/formResponse?pli=1"
                         width="100%" 
                         height="400"
                         frameborder="0"
@@ -354,6 +354,7 @@ window.addEventListener("load", () => {
 // Change Copyright Year Automatically
 
 document.getElementById('currentYear').textContent = new Date().getFullYear();
+
 
 
 
