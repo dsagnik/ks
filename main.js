@@ -311,7 +311,7 @@ window.addEventListener("load", () => {
         <div class="walkin-popup" id="walkinPopup">
             <div class="walkin-popup-content">
                 <span class="popup-close" id="closePopup">&times;</span>
-                <img src="images/walkin.jpg" alt="Walk-In Drive">
+                <img src="images/walkin.png" alt="Walk-In Drive">
 
                 <div class="popup-body">
                     <h2>Walk-In Drive — Opportunity Awaits!</h2>
@@ -348,6 +348,7 @@ window.addEventListener("load", () => {
 // Change Copyright Year Automatically
 
 document.getElementById('currentYear').textContent = new Date().getFullYear();
+
 
 
 
